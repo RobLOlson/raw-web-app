@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="MenuApp">
+    <head>
+        <title>Menu app</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <header>
+            <h1>The Ultimate TEST Menu</h1>
+        </header>
+        <nav>
+            <ul>
+                <li>1</li>
+            </ul>
+        </nav>
+        <section>
+            Lorem ipsum dolor
+        </section>
+        <aside>
+            {{ content }}
+        </aside>
+        <main>
+            <form action="{{url_for('hello_name', name=name)}}" method='POST' role="form">
+
+                <input type="text" name="url" id="url-box" placeholder="Enter URL..." style="max-width: 300px" autofocus required>
+                <button type="submit" class="pure-button pure-u-1 btn btn-default">Submit</button>
+            </form>
+        </main>
+        <footer>Errors go here:
+            {% for error in errors %}
+                <h4>{{ error }}</h4>
+            {% endfor %}
+        </footer>
+        </div>
+    </body>
+</html>
+
